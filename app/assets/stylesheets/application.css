@@ -44,11 +44,11 @@
 
 .other-form-container {
     margin-top: 75px;
+    /* bottom: 5px; */
 }
 
 .submit-button {
     display: flex;
-    /* align-self: center; */
     justify-content: center;
     background: #EF8744;
     color: #FEFDFB;
@@ -62,7 +62,6 @@
 }
 
 .submit-container {
-    /* text-align: center; */
     display: flex;
     justify-content: center;
 }
@@ -176,7 +175,6 @@ header > h2 {
 }
 
 .greeting-container {
-    /* align-content: center; */
     position: relative;
     display: inline-block;
 }
@@ -238,7 +236,9 @@ header > h2 {
 }
 
 .errors-ul {
-    border: 1px solid black;
-    height: 5px;
-    width: 5px;
+    /* border: 1px solid black; REMOVE WHEN ERRORS ARE WORKING */
+    list-style-type: none;
+    height: auto;
+    width: auto;
+    color: rgba(255, 0, 0, 0.721);
 }

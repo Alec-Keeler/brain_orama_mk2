@@ -21,12 +21,10 @@ export const receiveErrors = errors => ({
 
 //thunk actions
 export const thunkLogin = user => dispatch => sessionApiUtil.login(user)
-    .then((user) => {
-        return dispatch(receiveCurrentUser(user))
-    })
+    .then((user) => (dispatch(receiveCurrentUser(user))), (errors) => dispatch(receiveErrors(errors.responseJSON)))
 
 export const thunkLogout = () => dispatch => sessionApiUtil.logout()
     .then(() => dispatch(logoutCurrentUser()));
 
 export const thunkSignup = user => dispatch => sessionApiUtil.signup(user)
-    .then((user) => dispatch(receiveCurrentUser(user)));
+    .then((user) => (dispatch(receiveCurrentUser(user))), (errors) => dispatch(receiveErrors(errors.responseJSON)));

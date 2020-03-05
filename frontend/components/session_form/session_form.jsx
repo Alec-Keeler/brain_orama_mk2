@@ -30,37 +30,26 @@ class SessionForm extends React.Component {
             // .then(() => this.props.history.push('/'))
     }
 
-    // renderErrors() {
-    //     debugger
-    //     if (!this.props.errors) 
-    //     return(
-    //         <ul>
-    //             {this.props.errors.map((error, i) => (
-    //                 <li key={`error-${i}`}>
-    //                     {error}
-    //                 </li>
-    //             ))}
-    //         </ul>
-    //     )
-    // }
+    renderErrors() {
+        return(
+            <ul className='errors-ul'>
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        )
+    }
 
     render() {
-        // let errors = (<ul className='errors-ul'>
-        //                 {this.props.errors.map((error, i) => (
-        //                     <li>Hello????</li>
-        //                     // <li key={`error-${i}`}>
-        //                     //     {error}
-        //                     // </li>
-        //                 ))}
-        //             </ul>)
         const display = (this.props.formType === 'login') ? (
             //login display
             <div className='login-form-container'>
                 <h2>Log In</h2>
                 <button onClick={this.props.closeModal} className='close-x'>X</button>
-                {/* {this.renderErrors()} */}
-                {/* {errors} */}
                 <form onSubmit={this.handleSubmit} className='login-form'>
+                    <div>{this.renderErrors()}</div>
                     <label className='form-label'>Email</label>
                         <input type="text" onChange={this.handleInput('email')} className='login-input'/>
                     <label className='form-label'>Password</label>
@@ -74,8 +63,8 @@ class SessionForm extends React.Component {
             <div className='signup-form-container'>
                 <h2>Get Started</h2>
                 <button onClick={this.props.closeModal} className='close-x'>X</button>
-                {/* {this.renderErrors} */}
                 <form onSubmit={this.handleSubmit} className='signup-form'>
+                    <div>{this.renderErrors()}</div>
                     <label className='form-label'>First Name</label>
                         <input type="text" onChange={this.handleInput('first_name')} className='signup-input' />
                     <label className='form-label'>Last Name</label>
@@ -89,7 +78,7 @@ class SessionForm extends React.Component {
                 <div className='other-form-container'>{this.props.otherForm}</div>
             </div>
         )
-            
+        // debugger
         return (
             <div>
                 {display}
