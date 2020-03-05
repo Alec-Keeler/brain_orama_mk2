@@ -247,6 +247,6 @@ header > h2 {
     color: rgba(255, 0, 0, 0.721);
 }
 
-i {
+.fa-sort-down {
     color: white
 }

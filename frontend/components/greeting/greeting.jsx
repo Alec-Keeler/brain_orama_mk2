@@ -14,7 +14,7 @@ class Greeting extends React.Component {
             
             <button className='dropdown-button'><i className="fas fa-sort-down"></i> {this.props.currentUser.first_name} {this.props.currentUser.last_name}</button>
             <div className='dropdown-content'>
-                <a onClick={this.props.logout}>Log Out</a>
+                <a onClick={this.props.logout}><i className="fas fa-power-off"></i>  Log Out</a>
             </div>
         </div>
     ) : (
