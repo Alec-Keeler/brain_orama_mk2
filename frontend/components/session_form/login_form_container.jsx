@@ -4,10 +4,13 @@ import { thunkLogin } from '../../actions/session_actions';
 import SessionForm from './session_form';
 import { openModal, closeModal} from '../../actions/modal_actions';
 
-const mSTP = (state, ownProps) => ({
-    errors: state.session.errors,
-    formType: 'login'
-})
+const mSTP = (state, ownProps) => {
+    // debugger
+    return (
+        {errors: state.errors.session,
+        formType: 'login'}
+    )
+}
 
 const mDTP = dispatch => ({
     processForm: (user) => dispatch(thunkLogin(user)),

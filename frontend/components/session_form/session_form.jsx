@@ -11,7 +11,9 @@ class SessionForm extends React.Component {
             password: ''
         }
 
+
         this.handleSubmit = this.handleSubmit.bind(this)
+        // this.renderErrors = this.renderErrors.bind(this)
     }
 
     handleInput(type) {
@@ -28,25 +30,36 @@ class SessionForm extends React.Component {
             // .then(() => this.props.history.push('/'))
     }
 
-    renderErrors() {
-        return(
-            <ul>
-                {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>
-                        {error}
-                    </li>
-                ))}
-            </ul>
-        )
-    }
+    // renderErrors() {
+    //     debugger
+    //     if (!this.props.errors) 
+    //     return(
+    //         <ul>
+    //             {this.props.errors.map((error, i) => (
+    //                 <li key={`error-${i}`}>
+    //                     {error}
+    //                 </li>
+    //             ))}
+    //         </ul>
+    //     )
+    // }
 
     render() {
+        // let errors = (<ul className='errors-ul'>
+        //                 {this.props.errors.map((error, i) => (
+        //                     <li>Hello????</li>
+        //                     // <li key={`error-${i}`}>
+        //                     //     {error}
+        //                     // </li>
+        //                 ))}
+        //             </ul>)
         const display = (this.props.formType === 'login') ? (
             //login display
             <div className='login-form-container'>
                 <h2>Log In</h2>
                 <button onClick={this.props.closeModal} className='close-x'>X</button>
-                {this.renderErrors()}
+                {/* {this.renderErrors()} */}
+                {/* {errors} */}
                 <form onSubmit={this.handleSubmit} className='login-form'>
                     <label className='form-label'>Email</label>
                         <input type="text" onChange={this.handleInput('email')} className='login-input'/>
@@ -61,7 +74,7 @@ class SessionForm extends React.Component {
             <div className='signup-form-container'>
                 <h2>Get Started</h2>
                 <button onClick={this.props.closeModal} className='close-x'>X</button>
-                {this.renderErrors}
+                {/* {this.renderErrors} */}
                 <form onSubmit={this.handleSubmit} className='signup-form'>
                     <label className='form-label'>First Name</label>
                         <input type="text" onChange={this.handleInput('first_name')} className='signup-input' />
@@ -76,7 +89,7 @@ class SessionForm extends React.Component {
                 <div className='other-form-container'>{this.props.otherForm}</div>
             </div>
         )
-
+            
         return (
             <div>
                 {display}
