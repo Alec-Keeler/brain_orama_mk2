@@ -13,3 +13,226 @@
  *= require_tree .
  *= require_self
  */
+
+/* Modal */
+
+ .modal-background {
+     position: fixed;
+     top: 0;
+     bottom: 0;
+     right: 0;
+     left: 0;
+     background: rgba(0, 0, 0, 0.7);
+     z-index: 10;
+ }
+
+ .modal-child {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     background: white;
+     display: flex;
+     border-radius: 25px;
+ }
+
+.change-form-link {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.other-form-container {
+    margin-top: 75px;
+}
+
+.submit-button {
+    display: flex;
+    /* align-self: center; */
+    justify-content: center;
+    background: #EF8744;
+    color: #FEFDFB;
+    width: 95px;
+    height: 45px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 35px;
+}
+
+.submit-container {
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+}
+
+.login-form-container {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 400px;
+    align-items: center;
+}
+
+.signup-form-container {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 525px;
+    align-items: center;
+}
+
+.login-form, .signup-form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 50px;
+    width: 70%;
+}
+
+.login-form-container > h2 {
+    text-align: center;
+    color: #2B7096;
+    font-family: sans-serif;
+    height: fit-content;
+    position: relative;
+    padding-top: 20px;
+}
+
+.signup-form-container > h2 {
+    text-align: center;
+    color: #2B7096;
+    font-family: sans-serif;
+    height: fit-content;
+    position: relative;
+    padding-top: 20px;
+}
+
+.close-x {
+    background-color: transparent;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    font-size: 25px;
+    position: absolute;
+    font-weight: lighter;
+    cursor: pointer;
+    right: 15px;
+    top: 15px;
+}
+.close-x:hover {
+    background: #E5E5E5;
+}
+
+.login-input, .signup-input {
+    height: 35px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 3px solid #eee;
+    color: #2B7096;
+    padding-top: 8px;
+}
+.login-input:focus {
+    outline: none;
+    border-bottom: 3px solid #197096;
+}
+.signup-input:focus {
+    outline: none;
+    border-bottom: 3px solid #197096;
+}
+
+.form-label {
+    font-size: 13px;
+    color: #AAAAAA;
+}
+
+/* Header items */
+
+.splash-login {
+    cursor: pointer;
+    color: white;
+}
+
+.splash-login:hover, .splash-signup:hover {
+    color: #449DBA;
+}
+
+.splash-signup {
+    cursor: pointer;
+    color: #EF8744;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(111, 113, 118);
+    opacity: 0.8;
+    height: 75px;
+}
+header > h2 {
+    color: white
+}
+
+.greeting-container {
+    /* align-content: center; */
+    position: relative;
+    display: inline-block;
+}
+
+.greeting-container > a {
+    margin-right: 20px;
+}
+
+.dropdown-button {
+    background-color: rgb(111, 113, 118);
+    color: white;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+} 
+
+.dropdown-button:hover {
+    color: #42A5DD;
+    /* background-color: #f9f9f9; */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 10px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1ad;
+}
+
+.greeting-container:hover .dropdown-content {
+    display: block;
+}
+
+.master-div {
+    background-color: lightblue;
+    height: 1000px;
+}
+
+.home-link {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 20px;
+}
