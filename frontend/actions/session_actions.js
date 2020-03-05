@@ -30,6 +30,5 @@ export const thunkLogout = () => dispatch => sessionApiUtil.logout()
 
 export const thunkSignup = user => dispatch => sessionApiUtil.signup(user)
     .then((user) => (dispatch(receiveCurrentUser(user))), (errors) => {
-        debugger
         return dispatch(receiveErrors(errors.responseJSON))
     });
