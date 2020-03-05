@@ -10,8 +10,8 @@ import { Link } from 'react-router-dom'
 const App = () => (
     <div className='master-div'>
         <ModalContainer />
-        <header>
-            <Link className='home-link' to='/' >BRAINORAMA</Link>
+        <header id='navbar'>
+            <Link className='home-link'  to='/' >BRAINORAMA</Link>
             
             <GreetingContainer />
         </header>

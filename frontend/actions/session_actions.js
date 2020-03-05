@@ -14,10 +14,12 @@ export const logoutCurrentUser = () => ({
     type: LOGOUT_CURRENT_USER
 })
 
-export const receiveErrors = errors => ({
-    type: RECEIVE_ERRORS,
-    errors: errors
-})
+export const receiveErrors = errors => {
+    return ({
+        type: RECEIVE_ERRORS,
+        errors: errors
+    })
+}
 
 //thunk actions
 export const thunkLogin = user => dispatch => sessionApiUtil.login(user)
