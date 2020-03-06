@@ -81,6 +81,10 @@
     border-radius: 35px;
 }
 
+.oj-button:focus, .oj-signup:focus {
+    outline: none
+}
+
 .signup-container {
     display: flex;
     justify-content: center;
@@ -98,7 +102,7 @@
     display: flex;
     flex-direction: column;
     width: 500px;
-    height: 525px;
+    height: 530px;
     align-items: center;
 }
 
@@ -113,7 +117,7 @@
 .login-form-container > h2 {
     text-align: center;
     color: #2B7096;
-    font-family: sans-serif;
+    // font-family: sans-serif;
     height: fit-content;
     position: relative;
     padding-top: 20px;
@@ -122,7 +126,7 @@
 .signup-form-container > h2 {
     text-align: center;
     color: #2B7096;
-    font-family: sans-serif;
+    // font-family: sans-serif;
     height: fit-content;
     position: relative;
     padding-top: 20px;
@@ -139,9 +143,14 @@
     cursor: pointer;
     right: 15px;
     top: 15px;
+    border: none;
 }
 .close-x:hover {
     background: #E5E5E5;
+}
+
+.close-x:focus {
+    outline: none
 }
 
 .login-input, .signup-input {
@@ -193,6 +202,7 @@
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 5;
 }
 header > h2 {
     color: white
@@ -249,12 +259,15 @@ header > h2 {
 .master-div {
     display: flex;
     background: linear-gradient(to right, transparent, black), image_url('background.jpg');
-    /* width: 100%; */
-    /* min-width: auto; */
-    height: 1000px;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background-size: cover;
     background-repeat: no-repeat;
-    position: relative;
+    position: absolute;
 }
 
 .home-link {
@@ -267,12 +280,24 @@ header > h2 {
     margin-left: 20px;
     align-self: center;
 }
+.home-link:hover {
+    color: #449DBA;
+}
 
 .icon {
+    display: inline-block;
+    border-radius: 20px 20px 20px 20px;
     height: 30px;
     width: 30px;
-    padding-right: 5px;
-    /* align-content: center; */ 
+    margin-right: 15px;
+    // border: 10px solid transparent;
+    // padding-right: 15px;
+    // border-image: url('brainscape-icon.png') 30 round;
+}
+
+.errors-div {
+    display: flex;
+    text-align: center;
 }
 
 .errors-ul {
@@ -280,6 +305,8 @@ header > h2 {
     height: auto;
     width: auto;
     color: rgba(255, 0, 0, 0.721);
+    align-items: center;
+    padding: 0px;
 }
 
 .fa-sort-down {
@@ -293,7 +320,7 @@ header > h2 {
     text-align: right;
     color: white;
     text-shadow: 2px 2px 4px #000000;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    // font-family: Verdana, Geneva, Tahoma, sans-serif;
     width: 600px;
 }
 

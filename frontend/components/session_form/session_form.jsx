@@ -56,27 +56,26 @@ class SessionForm extends React.Component {
             //login display
             <div className='login-form-container'>
                 <h2>Log In</h2>
-                <button onClick={this.props.closeModal} className='close-x'>X</button>
+                <button onClick={this.props.closeModal} className='close-x'><i className="fas fa-times"></i></button>
                 <form onSubmit={this.handleSubmit} className='login-form'>
-                    <div>{this.renderErrors()}</div>
                     <label className='form-label'>Email</label>
                         <input type="text" onChange={this.handleInput('email')} className='login-input'/>
                     <label className='form-label'>Password</label>
-                        <input type="text" onChange={this.handleInput('password')} className='login-input'/>
+                        <input type="password" onChange={this.handleInput('password')} className='login-input'/>
                     <div className='submit-container'>
                         <input type='submit' value='Log In' className='oj-button'/>
-                        <input type='submit' onClick={() => this.props.loginDemo().then(() => this.props.closeModal())} value='Demo User' className='oj-button' />
+                        <button type='text' onClick={() => this.props.loginDemo().then(() => this.props.closeModal())} className='oj-button'>Demo User</button>
                     </div>
                 </form>
                 <div className='other-form-container'>{this.props.otherForm}</div>
+                <div className='errors-div'>{this.renderErrors()}</div>
             </div>
         ) : (
             //signup display
             <div className='signup-form-container'>
                 <h2>Get Started</h2>
-                <button onClick={this.props.closeModal} className='close-x'>X</button>
+                    <button onClick={this.props.closeModal} className='close-x'><i className="fas fa-times"></i></button>
                 <form onSubmit={this.handleSubmit} className='signup-form'>
-                    <div>{this.renderErrors()}</div>
                     <label className='form-label'>First Name</label>
                         <input type="text" onChange={this.handleInput('first_name')} className='signup-input' />
                     <label className='form-label'>Last Name</label>
@@ -84,12 +83,13 @@ class SessionForm extends React.Component {
                     <label className='form-label'>Email</label>
                         <input type="text" onChange={this.handleInput('email')} className='signup-input' />
                     <label className='form-label'>Password</label>
-                        <input type="text" onChange={this.handleInput('password')} className='signup-input' />
+                        <input type="password" onChange={this.handleInput('password')} className='signup-input' />
                     <div className='signup-container'>
                         <input type='submit' value='Sign Up' className='oj-signup' />
                     </div>
                 </form>
                 <div className='other-form-container'>{this.props.otherForm}</div>
+                <div className='errors-div'>{this.renderErrors()}</div>
             </div>
         )
         return (
