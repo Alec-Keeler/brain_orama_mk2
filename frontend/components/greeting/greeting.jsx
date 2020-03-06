@@ -12,7 +12,7 @@ class Greeting extends React.Component {
         const display = this.props.currentUser ? (
         <div className='greeting-container'>
             
-            <button className='dropdown-button'><i className="fas fa-sort-down"></i> {this.props.currentUser.first_name} {this.props.currentUser.last_name}</button>
+            <button className='dropdown-button'><i className="fas fa-sort-down"></i> {this.props.currentUser.first_name + ' ' + this.props.currentUser.last_name}</button>
             <div className='dropdown-content'>
                 <a onClick={this.props.logout}><i className="fas fa-power-off"></i>  Log Out</a>
             </div>

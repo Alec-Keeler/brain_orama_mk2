@@ -16,6 +16,7 @@ class SessionForm extends React.Component {
         // this.renderErrors = this.renderErrors.bind(this)
     }
 
+
     handleInput(type) {
         return (e) => {
             this.setState({ [type]: e.target.value })
@@ -44,6 +45,10 @@ class SessionForm extends React.Component {
                 ))}
             </ul>
         )
+    }
+
+    componentWillUnmount() {
+        this.props.clearErrors();
     }
 
     render() {
@@ -82,7 +87,6 @@ class SessionForm extends React.Component {
                 <div className='other-form-container'>{this.props.otherForm}</div>
             </div>
         )
-        // debugger
         return (
             <div>
                 {display}

@@ -5,6 +5,12 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <script type="text/javascript">
+      window.background = "<%= image_url('background.jpg') %>";
+    </script>
+    <script type="text/javascript">
+      window.brainscape_icon = "<%= image_url('brainscape-icon.png') %>";
+    </script>
     <script src="https://kit.fontawesome.com/8d62d0058c.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>

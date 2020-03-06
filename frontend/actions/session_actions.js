@@ -3,6 +3,7 @@ import * as sessionApiUtil from '../util/session_api_util'
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
+export const CLEAR_ERRORS = 'CLEAR_ERRORS';
 
 //regular actions
 export const receiveCurrentUser = currentUser => ({
@@ -20,6 +21,10 @@ export const receiveErrors = errors => {
         errors: errors
     })
 }
+
+export const clearErrors = () => ({
+    type: CLEAR_ERRORS
+})
 
 //thunk actions
 export const thunkLogin = user => dispatch => sessionApiUtil.login(user)
