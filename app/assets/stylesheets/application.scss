@@ -48,7 +48,7 @@
     /* bottom: 5px; */
 }
 
-.submit-button {
+.oj-button {
     display: flex;
     justify-content: center;
     background: #EF8744;
@@ -63,6 +63,25 @@
 }
 
 .submit-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.oj-signup {
+    display: flex;
+    justify-content: center;
+    background: #EF8744;
+    color: #FEFDFB;
+    width: 95px;
+    height: 45px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 35px;
+}
+
+.signup-container {
     display: flex;
     justify-content: center;
 }

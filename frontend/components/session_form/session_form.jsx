@@ -63,7 +63,10 @@ class SessionForm extends React.Component {
                         <input type="text" onChange={this.handleInput('email')} className='login-input'/>
                     <label className='form-label'>Password</label>
                         <input type="text" onChange={this.handleInput('password')} className='login-input'/>
-                    <div className='submit-container'><input type='submit' value='Log In' className='submit-button'/></div>
+                    <div className='submit-container'>
+                        <input type='submit' value='Log In' className='oj-button'/>
+                        <input type='submit' onClick={() => this.props.loginDemo().then(() => this.props.closeModal())} value='Demo User' className='oj-button' />
+                    </div>
                 </form>
                 <div className='other-form-container'>{this.props.otherForm}</div>
             </div>
@@ -82,7 +85,9 @@ class SessionForm extends React.Component {
                         <input type="text" onChange={this.handleInput('email')} className='signup-input' />
                     <label className='form-label'>Password</label>
                         <input type="text" onChange={this.handleInput('password')} className='signup-input' />
-                    <div className='submit-container'><input type='submit' value='Sign Up' className='submit-button' /></div>
+                    <div className='signup-container'>
+                        <input type='submit' value='Sign Up' className='oj-signup' />
+                    </div>
                 </form>
                 <div className='other-form-container'>{this.props.otherForm}</div>
             </div>
