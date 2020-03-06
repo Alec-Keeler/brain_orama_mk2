@@ -229,7 +229,7 @@ header > h2 {
 
 .master-div {
     display: flex;
-    background: linear-gradient(to right, transparent, black), url('background.jpg');
+    background: linear-gradient(to right, transparent, black), image_url('background.jpg');
     /* width: 100%; */
     /* min-width: auto; */
     height: 1000px;
