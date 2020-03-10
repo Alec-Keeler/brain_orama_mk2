@@ -21,6 +21,14 @@ class User < ApplicationRecord
 
     attr_reader :password
 
+    has_many :decks,
+        foreign_key: :creator_id,
+        class_name: :Deck
+
+    has_many :cards,
+        foreign_key: :author_id,
+        class_name: :Card
+
     def self.find_by_credentials(email, password)
         user = User.find_by(email: email)
         return user if user && user.is_password?(password)

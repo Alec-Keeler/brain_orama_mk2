@@ -11,4 +11,12 @@
 #  updated_at :datetime         not null
 #
 class Card < ApplicationRecord
+
+    belongs_to :deck,
+        foreign_key: :deck_id,
+        class_name: :Deck
+
+    belongs_to :author,
+        foreign_key: :author_id,
+        class_name: :User
 end
