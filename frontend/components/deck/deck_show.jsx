@@ -35,14 +35,14 @@ class DeckShow extends React.Component {
 
     render () {
         if (!this.props.deck) {
-            return null
+            return null;
         }
 
         let currUserId;
         if (!this.props.currentUser) {
-            currUserId = null
+            currUserId = null;
         } else {
-            currUserId = this.props.currentUser.id
+            currUserId = this.props.currentUser.id;
         }
     
         let display = <div></div>;
@@ -50,6 +50,7 @@ class DeckShow extends React.Component {
         if (currUserId === this.props.deck.creator_id) {
             display = <div>
                         <Link to={`/decks/${this.props.deck.id}/edit`}>Update Deck</Link>
+                        <Link to={`/decks/${this.props.deck.id}/cards/new`}>Add Card</Link>
                         <br/>
                         <button onClick={this.handleDelete}>Delete Deck</button>
                     </div>
