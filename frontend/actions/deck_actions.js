@@ -12,7 +12,6 @@ const receiveDecks = decks => {
 }
 
 const receiveDeck = deck => {
-    // debugger
     return (
         {type: RECEIVE_DECK,
         deck}
@@ -31,6 +30,7 @@ export const thunkRequestDecks = () => dispatch => (
 
 export const thunkRequestDeck = (deckId) => dispatch => (
     DeckAPIUtil.fetchDeck(deckId)
+        // .then(deck => console.log(deck))
         .then(deck => dispatch(receiveDeck(deck)))
 )
 

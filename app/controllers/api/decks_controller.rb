@@ -17,13 +17,8 @@ class Api::DecksController < ApplicationController
         end
     end
 
-    # def new
-    #     render json: ['yayyyy']
-    # end
-
     def update
         @deck = Deck.find_by(id: params[:id])
-        # debugger
         if @deck.update(deck_params)
             render :show
         else
@@ -36,7 +31,6 @@ class Api::DecksController < ApplicationController
         @deck.destroy
 
         render :show
-        # render json: ['SUCCESS']
     end
 
     def deck_params

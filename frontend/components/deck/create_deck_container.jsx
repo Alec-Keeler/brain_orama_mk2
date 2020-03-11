@@ -3,7 +3,6 @@ import { thunkCreateDeck } from '../../actions/deck_actions';
 import DeckForm from './deck_form';
 
 const mSTP = state => {
-    debugger
     return (
         {deck: {
             name: '',

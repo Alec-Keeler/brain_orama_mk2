@@ -5,6 +5,7 @@ import configureStore from './store/store';
 import Root from './components/root';
 import {thunkLogin} from './actions/session_actions'
 import { thunkRequestDecks, thunkRequestDeck, thunkDeleteDeck } from './actions/deck_actions'
+import {thunkRequestCards} from './actions/card_actions'
 
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("root");
@@ -30,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.thunkRequestDecks = thunkRequestDecks;
     window.thunkRequestDeck = thunkRequestDeck;
     window.thunkDeleteDeck = thunkDeleteDeck;
+    window.thunkRequestCards = thunkRequestCards;
     //testing end
 
     ReactDOM.render(<Root store={store} />, root)

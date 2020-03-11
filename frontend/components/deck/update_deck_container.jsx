@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { thunkRequestDeck, thunkUpdateDeck } from '../../actions/deck_actions';
 import DeckForm from './deck_form';
 
@@ -9,7 +10,6 @@ class UpdateDeckForm extends React.Component {
     }
 
     render() {
-        debugger
         const { deck, formType, submitDeck } = this.props;
 
         if (!deck) return null;

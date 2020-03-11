@@ -20,7 +20,6 @@ export const createDeck = (deck) => (
 )
 
 export const updateDeck = (deck) => {
-    // debugger
     return(
         $.ajax({
             url: `/api/decks/${deck.id}`,
