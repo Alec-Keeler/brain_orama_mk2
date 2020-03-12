@@ -22,7 +22,7 @@ class DeckForm extends React.Component {
 
     render() {
         return (
-            <div className='deck-form-container'>
+            <div className='deck-form-container animated fadeIn'>
                 <h1 className='deck-form-title'>{this.props.formType}</h1>
                 <form className='deck-form' onSubmit={this.handleSubmit}>
                     <label className='deck-input-name'>Name</label>

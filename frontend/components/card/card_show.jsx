@@ -55,9 +55,9 @@ class CardShow extends React.Component {
         }
 
         return (
-            <div className='card-show-container'>
+            <div className='card-show-container animated zoomIn'>
                 <h2 className='card-show-question'>{this.props.card.question}</h2>
-                <div className='card-show-answer-div'>{this.state.showAnswer && (<div className='card-show-answer'>{this.props.card.answer}</div>)}</div>
+                <div className='card-show-answer-div'>{this.state.showAnswer && (<div className='card-show-answer animated flipInX'>{this.props.card.answer}</div>)}</div>
                 <div className='card-show-hider-div'><button className='card-show-hider' onClick={this.handleSubmit}>{buttonName}</button>
                 <Link className='card-show-deck-link' to={`/decks/${this.props.match.params.deckId}`}>Return to Deck</Link></div>
                 {display}

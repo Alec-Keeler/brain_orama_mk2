@@ -10,8 +10,8 @@ class DeckIndex extends React.Component {
         const { decks } = this.props;
         return (
             <div className='master-deck-index'>
-                <div><Link className='create-deck-link' to='/decks/new'>Create a new deck!<i className="fas fa-chevron-right"></i></Link></div>
-                <div className='deck-index-cont'>
+                <div><Link className='create-deck-link  animated bounceInDown delay-1s' to='/decks/new'>Create a new deck!<i className="fas fa-chevron-right"></i></Link></div>
+                <div className='deck-index-cont animated slideInDown'>
                     <div className='deck-list'>
                         {decks.map(deck => {
                             return (

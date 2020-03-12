@@ -29,7 +29,7 @@ class CardForm extends React.Component {
         }
 
         return (
-            <div className='card-form-container'>
+            <div className='card-form-container animated fadeIn'>
                 <h1 className='card-form-title'>{this.props.formType}</h1>
                 <form className='card-form' onSubmit={this.handleSubmit}>
                     <label className='card-input-name'>Question</label>

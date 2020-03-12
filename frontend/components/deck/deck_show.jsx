@@ -27,7 +27,7 @@ class DeckShow extends React.Component {
         let cardIds = getState().entities.decks[this.props.match.params.deckId].card_ids;
 
         let cardButtons = cardIds.map((cardId, i) => (
-            <button onClick={this.handleCardSubmit} value={cardId}>Card {i+1}</button>
+            <button className='card-btn' onClick={this.handleCardSubmit} value={cardId}>Card {i+1}</button>
         ))
         
         return cardButtons;
@@ -48,24 +48,23 @@ class DeckShow extends React.Component {
         let display = <div></div>;
         
         if (currUserId === this.props.deck.creator_id) {
-            display = <div>
-                        <Link to={`/decks/${this.props.deck.id}/edit`}>Update Deck</Link>
-                        <Link to={`/decks/${this.props.deck.id}/cards/new`}>Add Card</Link>
-                        <br/>
-                        <button onClick={this.handleDelete}>Delete Deck</button>
+            display = <div className='creator-btns-div'>
+                        <Link className='creator-link' to={`/decks/${this.props.deck.id}/edit`}>Update Deck</Link>
+                        <Link className='creator-link' to={`/decks/${this.props.deck.id}/cards/new`}>Add Card</Link>
+                        <button className='creator-btn' onClick={this.handleDelete}>Delete Deck</button>
                     </div>
         } else {
             display = <div></div>
         }
 
         return (
-            <div>
-                <h1>{this.props.deck.name}</h1>
-                <br/>
-                <p>{this.props.deck.description}</p>
-                {/* add a link to study/see the cards in the deck */}
-                {display}
-                {this.cardsList()}
+            <div className='deck-show-master-cont'>
+                <div className='deck-show-container animated slideInLeft slow'>
+                    <h1 className='deck-show-title'>{this.props.deck.name}</h1>
+                    <p className='deck-show-desc'>{this.props.deck.description}</p>
+                    {display}
+                </div>
+                <div className='card-btn-container animated slideInLeft slower'>{this.cardsList()}</div>
             </div>
         )
     }

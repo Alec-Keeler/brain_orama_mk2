@@ -13,7 +13,7 @@
 
 .create-deck-link {
     display: flex;
-    position: absolute;
+    position: relative;
     background-color: #3D91AF;
     opacity: 0.65;
     top: 25%;
@@ -41,6 +41,16 @@
 .deck-index-cont {
     display: flex;
     position: relative;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.deck-list {
+    height: 90%;
+    overflow-y: auto;    
+}
+.deck-list::-webkit-scrollbar {
+    display: none;
 }
 
 .deck-li-item {
@@ -87,7 +97,6 @@
     display: flex;
     padding: 20px;
     justify-content: center;
-
 }
 
 .deck-input-name {
@@ -140,4 +149,94 @@
 }
 .deck-form-submit:focus {
     outline: none;
+}
+
+//Deck Show Page
+
+.deck-show-master-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.deck-show-container {
+    background-color: #324054;
+    opacity: 0.85;
+    display: flex;
+    position: relative;
+    top: 80px;
+    margin: 0 auto;
+    height: auto;
+    width: 450px;
+    color: white;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+.deck-show-title, .deck-show-desc {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+}
+
+.card-btn-container {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    grid-gap: 1rem;
+    width: 80%;
+}
+
+.card-btn {
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    // margin: auto;
+
+    // height: 35px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #3D91AF;
+    opacity: 0.65;
+}
+
+.card-btn:hover {
+    opacity: 0.5;
+}
+
+.card-btn-container > button {
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.creator-btns-div {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+}
+
+.creator-btn, .creator-link {
+    display: flex;
+    justify-content: center;
+    background: #EF8744;
+    color: #FEFDFB;
+    width: 95px;
+    height: 45px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 35px;
+    border: hidden;
+}
+
+.creator-link {
+    display: flex;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
 }

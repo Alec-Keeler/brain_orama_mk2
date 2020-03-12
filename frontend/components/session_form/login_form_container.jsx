@@ -14,7 +14,7 @@ const mSTP = (state, ownProps) => {
 const mDTP = dispatch => ({
     processForm: (user) => dispatch(thunkLogin(user)),
     otherForm: (
-        <a onClick={() => dispatch(openModal('signup'))} className='change-form-link'>
+        <a onClick={() => dispatch(openModal('signup'))} className='change-form-link '>
             Create an account?
         </a>
     ),
