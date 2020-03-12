@@ -2,7 +2,7 @@ import React from 'react';
 
 const SplashText = () => {
     return (
-        <div className='splash-text-main'>
+        <div className='splash-text-main animated slideInRight slow'>
             <h1 className='splash-text-title'>The World's Smartest Flashcards</h1>
             <h3 className='splash-text-subtitle'>Add your own digital flashcards, and find milions of other public cards on a wide range of topics.</h3>
             <h3 className='splash-text-sub'>Learn twice as fast, and remember longer.</h3>
