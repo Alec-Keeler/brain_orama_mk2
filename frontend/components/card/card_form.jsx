@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 class CardForm extends React.Component {
     constructor(props) {
@@ -20,18 +21,24 @@ class CardForm extends React.Component {
     }
 
     render() {
+        let goBackLink = <div></div>
+        if (this.props.formType === 'Create Card') {
+            goBackLink = <Link className='go-back-link' to={`/decks/${this.props.match.params.deckId}`}>Nevermind, go back to the deck!</Link>
+        } else {
+            goBackLink = <Link className='go-back-link' to={`/decks/${this.props.match.params.deckId}/cards/${this.props.match.params.cardId}`}>Nevermind, go back to the card!</Link>
+        }
+
         return (
-            <div>
-                <h1>{this.props.formType}</h1>
-                <form onSubmit={this.handleSubmit}>
-                    <label>Question
-                        <input type="text" value={this.state.question} onChange={this.update('question')} />
-                    </label>
-                    <label>Answer
-                        <textarea value={this.state.answer} onChange={this.update('answer')} />
-                    </label>
-                    <button type='submit' value={this.props.formType}>{this.props.formType}</button>
+            <div className='card-form-container'>
+                <h1 className='card-form-title'>{this.props.formType}</h1>
+                <form className='card-form' onSubmit={this.handleSubmit}>
+                    <label className='card-input-name'>Question</label>
+                        <div className='card-input-div'><textarea maxLength='150' className='card-input-box-q' type="text" value={this.state.question} onChange={this.update('question')} /></div>
+                    <label className='card-input-name'>Answer</label>
+                        <div className='card-input-div'><textarea maxLength='730' className='card-input-box-a' value={this.state.answer} onChange={this.update('answer')} /></div>
+                    <div className='card-form-submit-div'><button className='card-form-submit' type='submit' value={this.props.formType}>{this.props.formType}</button></div>
                 </form>
+                <div className='go-back-div'>{goBackLink}</div>
             </div>
         )
     }

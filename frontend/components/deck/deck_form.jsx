@@ -22,19 +22,17 @@ class DeckForm extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>{this.props.formType}</h1>
-                <form onSubmit={this.handleSubmit}>
-                    <label>Name
-                        <input type="text" value={this.state.name} onChange={this.update('name')}/>
-                    </label>
-                    <label>Description
-                        <textarea value={this.state.description} onChange={this.update('description')}/>
-                    </label>
-                    <button type='submit' value={this.props.formType}>{this.props.formType}</button>
+            <div className='deck-form-container'>
+                <h1 className='deck-form-title'>{this.props.formType}</h1>
+                <form className='deck-form' onSubmit={this.handleSubmit}>
+                    <label className='deck-input-name'>Name</label>
+                        <div className='deck-input-div'><input className='deck-input-box-n' type="text" value={this.state.name} onChange={this.update('name')} /></div>
+                    <label className='deck-input-name'>Description</label>
+                        <div className='deck-input-div'><textarea maxLength='300' className='deck-input-box-d' value={this.state.description} onChange={this.update('description')} /></div>
+                    <div className='deck-form-submit-div'><button className='deck-form-submit' type='submit' value={this.props.formType}>{this.props.formType}</button></div>
                 </form>
             </div>
-            )
+        )
     }
 }
 

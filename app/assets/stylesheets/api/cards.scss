@@ -2,6 +2,190 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.card-title {
-    background-color: white;
+// Card Create/Update
+
+.card-form-container {
+    background-color: #324054;
+    opacity: 0.85;
+    display: flex;
+    position: relative;
+    top: 20%;
+    margin: 0 auto;
+    height: 425px;
+    color: white;
+    flex-direction: column;
+    border-radius: 20px;
 }
+
+.card-form-title {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+
+}
+
+.card-input-name {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 7px;
+    justify-content: center;
+}
+
+.card-input-div {
+    display: flex;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.card-input-box-q {
+    display: flex;
+    width: 250px;
+    height: 55px;
+    font-size: 14px;
+    background-color: #EAF2F6;
+}
+.card-input-box-a {
+    display: flex;
+    width: 350px;
+    height: 70px;
+    font-size: 14px;
+    background-color: #EAF2F6;
+}
+
+textarea {
+    resize: none;
+    border-radius: 5px;
+}
+
+.card-form-submit {
+    display: flex;
+    background: #EF8744;
+    color: #FEFDFB;
+    width: 95px;
+    height: 45px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 35px;
+    border: hidden;
+}
+.card-form-submit-div {
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+}
+.card-form-submit:focus {
+    outline: none;
+}
+
+.go-back-div {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px
+}
+.go-back-link {
+    color: white;
+    text-decoration: none;
+}
+.go-back-link:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+
+
+// Card Show
+.card-show-container {
+    background-color: #324054;
+    opacity: 0.85;
+    display: flex;
+    position: relative;
+    top: 20%;
+    margin: 0 auto;
+    height: 500px;
+    width: 550px;
+    color: white;
+    flex-direction: column;
+    border-radius: 20px;
+    
+}
+
+.card-show-question {
+    padding: 20px;
+    padding: 15px;
+    word-wrap: break-word;
+    text-align: center;
+    height: 90px;
+}
+
+.card-show-answer-div {
+    height: 225px;
+    padding: 7px;
+}
+
+.card-show-answer {
+    word-wrap: break-word;
+}
+
+.card-show-hider-div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card-show-hider, .card-show-deck-link {
+    display: flex;
+    justify-content: center;
+    background: #EF8744;
+    color: #FEFDFB;
+    width: 95px;
+    height: 45px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 35px;
+    border: hidden;
+}
+.card-show-deck-link {
+    display: flex;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+}
+.card-show-hider:focus, .card-show-deck-link:focus {
+    outline: none;
+}
+
+.card-show-extra-btns-div {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+}
+
+.card-show-edit-link, .card-show-delete-btn {
+    display: flex;
+    justify-content: center;
+    background: #EF8744;
+    color: #FEFDFB;
+    width: 95px;
+    height: 45px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 35px;
+    border: hidden;
+}
+.card-show-edit-link {
+    display: flex;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+}
+.card-show-edit-link:focus, .card-show-delete-btn:focus {
+    outline: none;
+}
+
+// card show rendered on: background: image_url('index_card.png');

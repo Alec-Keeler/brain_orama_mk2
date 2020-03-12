@@ -24,7 +24,7 @@ class UpdateCardForm extends React.Component {
 
 const mSTP = (state, ownProps) => ({
     card: state.entities.cards[ownProps.match.params.cardId],
-    formType: 'Update Deck'
+    formType: 'Update Card'
 })
 
 const mDTP = dispatch => ({

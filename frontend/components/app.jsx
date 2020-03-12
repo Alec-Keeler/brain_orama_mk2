@@ -17,7 +17,7 @@ const App = () => (
         <ModalContainer />
         <header id='navbar'>
             <Link className='home-link' to='/' ><img className='icon' src={window.brainscape_icon} />BRAINORAMA</Link>
-            <Link to='/decks'>Deck List</Link>
+            <Link className='deck-list-link' to='/decks'>Deck List</Link>
             
             <GreetingContainer />
         </header>

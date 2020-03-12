@@ -1,3 +1,143 @@
 // Place all the styles related to the api/decks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// deck index styles
+
+.master-deck-index {
+    display: flex;
+    position: relative;
+    top: 75px;
+    width: 100%;
+}
+
+.create-deck-link {
+    display: flex;
+    position: absolute;
+    background-color: #3D91AF;
+    opacity: 0.65;
+    top: 25%;
+    left: 50px;
+    height: 100px;
+    width: 300px;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+.create-deck-link:hover {
+    opacity: 0.5;
+}
+
+.deck-index-cont {
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    width: 420px;
+}
+
+.deck-index-cont {
+    display: flex;
+    position: relative;
+}
+
+.deck-li-item {
+    display: flex;
+    background-color: #324054;
+    opacity: 0.8;
+    padding: 20px;
+    color: white;
+    margin: 5px;
+    border-radius: 15px;
+}
+
+.deck-show-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-right: 1px solid white;
+}
+
+.deck-li-item:hover a {
+    color: #42A5DD;
+}
+
+.deck-desc {
+    padding-left: 10px;
+}
+
+//deck form styles
+
+.deck-form-container {
+    background-color: #324054;
+    opacity: 0.85;
+    display: flex;
+    position: relative;
+    top: 20%;
+    margin: 0 auto;
+    height: 425px;
+    color: white;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+.deck-form-title {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+
+}
+
+.deck-input-name {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 7px;
+    justify-content: center;
+}
+
+.deck-input-div {
+    display: flex;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.deck-input-box-n {
+    display: flex;
+    width: 250px;
+    height: 20px;
+    font-size: 14px;
+    background-color: #EAF2F6;
+}
+
+.deck-input-box-d {
+    display: flex;
+    width: 350px;
+    height: 70px;
+    font-size: 14px;
+    background-color: #EAF2F6;
+}
+
+.deck-form-submit {
+    display: flex;
+    background: #EF8744;
+    color: #FEFDFB;
+    width: 95px;
+    height: 45px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 35px;
+    border: hidden;
+}
+.deck-form-submit-div {
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+}
+.deck-form-submit:focus {
+    outline: none;
+}
