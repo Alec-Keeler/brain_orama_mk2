@@ -1,7 +1,7 @@
 import React from 'react';
 import GreetingContainer from './greeting/greeting_container';
 import { Link, Route, Switch } from 'react-router-dom';
-import { AuthRoute } from '../util/route_util';
+import { ProtRoute } from '../util/route_util';
 import ModalContainer from './modal/modal';
 import SplashText from './splash_text';
 import DeckIndexContainer from './deck/deck_index_container';
@@ -22,12 +22,12 @@ const App = () => (
             <GreetingContainer />
         </header>
         <Switch>
-            <AuthRoute path='/decks/new' component={CreateDeckContainer} />
-            <AuthRoute path='/decks/:deckId/cards/new' component={CreateCardContainer} />
-            <AuthRoute path='/decks/:deckId/cards/:cardId/edit' component={UpdateCardContainer} />
-            <AuthRoute path='/decks/:deckId/cards/:cardId' component={CardShowContainer} />
-            <AuthRoute path='/decks/:deckId/edit' component={UpdateDeckContainer} />
-            <AuthRoute path='/decks/:deckId' component={DeckShowContainer} />
+            <ProtRoute path='/decks/new' component={CreateDeckContainer} />
+            <ProtRoute path='/decks/:deckId/cards/new' component={CreateCardContainer} />
+            <ProtRoute path='/decks/:deckId/cards/:cardId/edit' component={UpdateCardContainer} />
+            <ProtRoute path='/decks/:deckId/cards/:cardId' component={CardShowContainer} />
+            <ProtRoute path='/decks/:deckId/edit' component={UpdateDeckContainer} />
+            <ProtRoute path='/decks/:deckId' component={DeckShowContainer} />
             <Route path='/decks' component={DeckIndexContainer} />
             <Route path='/' component={SplashText} />
         </Switch>

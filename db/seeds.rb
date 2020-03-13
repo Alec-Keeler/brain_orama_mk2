@@ -25,7 +25,7 @@ d1 = Deck.create(name: 'Ancient Roman Republic',
 
 d2 = Deck.create(name: 'Algebra',
     description: "Study basic algebra concepts and examples",
-    creator_id: u1.id)
+    creator_id: u2.id)
 
 d3 = Deck.create(name: 'Early Christian / Byzantine Art History',
     description: "Learn about famous art of the Early Christian period",
@@ -57,6 +57,26 @@ d9 = Deck.create(name: 'US Gov Basics',
 
 d10 = Deck.create(name: 'JavaScript Basics',
     description: "New to programming?  Start here!",
+    creator_id: u1.id)
+
+d11 = Deck.create(name: 'Biology - Cells/Cells Theory',
+    description: "Begin learning the basics of biology",
+    creator_id: u1.id)
+
+d12 = Deck.create(name: 'Boating',
+    description: "Do you yearn for a life at sea?  Start preping!",
+    creator_id: u1.id)
+
+d13 = Deck.create(name: 'Electrical Engineering',
+    description: "Begin understanding the building blocks of electricity",
+    creator_id: u1.id)
+
+d14 = Deck.create(name: 'English',
+    description: "Do they speak English in What?",
+    creator_id: u1.id)
+
+d15 = Deck.create(name: "Driver's Ed",
+    description: "Need to get form point A to point B?  Hit the road, Jack!",
     creator_id: u1.id)
 
 Card.delete_all
