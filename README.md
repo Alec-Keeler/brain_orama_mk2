@@ -4,6 +4,8 @@ BrainOrama is a website designed to help users study and learn a wide range of t
 
 [Visit the site here!](http://brainorama.herokuapp.com/#/)
 
+![brainorama image](./app/assets/images/ReadMe_image.png)
+
 ## How It Works
 
 Users are able to create any number of decks from the Deck List page.  Once a deck has been created, it's creator can easily add flashcards, giving each card a question and answer, either of which they can edit later if desired.  Users can navigate the cards in a deck, see the given question, and reveal its answer when they're ready.
