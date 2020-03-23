@@ -10,7 +10,7 @@ Users are able to create any number of decks from the Deck List page.  Once a de
 
 ## Technologies Used
 
-BrainOrama was built using a combination of Ruby on Rails with PostgreSQL, React, Redux, Javascript, HTML, CSS and the [animate.css library](https://github.com/daneden/animate.css).  Ruby on Rails was used to format the back end.  React and Redux were used to connect the Rails back end to the front end and design the User Interface.  HTLM, CSS and animate.css were used to enhane the User Experience.
+BrainOrama was built using a combination of Ruby on Rails with PostgreSQL, React, Redux, Javascript, HTML, CSS and the [animate.css library](https://github.com/daneden/animate.css).  Ruby on Rails was used to format the back end.  React and Redux were used to connect the Rails back end to the front end and design the User Interface.  HTLM, CSS and animate.css were used to enhance the User Experience.
 
 ## Specific Features
 
@@ -33,7 +33,7 @@ if (currUserId === this.props.card.author_id) {
 
 After creating a card or cards for your deck, or finding a deck you're interested in, you can study its cards from the deck's show page.  When you click on a card button, you're brought to a page displaying the card's question.  When you're ready, a button will allow you to reveal the answer.  You can then hide the answer again if you wish.
 
-This was accomplished by adding a key/value pair to the page's state to keep track of a boolean indicating if the answer should be hidden or revealed.  Then a simply JavaScript boolean statement is used to determine if the element containing the answer should be displayed or not:
+This was accomplished by adding a key/value pair to the page's state to keep track of a boolean indicating if the answer should be hidden or revealed.  Then a simple JavaScript boolean statement is used to determine if the element containing the answer should be displayed or not:
 
 ``<div className='card-show-answer-div'>{this.state.showAnswer && (<div className='card-show-answer animated flipInX'>{this.props.card.answer}</div>)}</div>``
 
