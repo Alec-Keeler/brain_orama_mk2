@@ -11,6 +11,7 @@ import UpdateDeckContainer from './deck/update_deck_container';
 import CardShowContainer from './card/card_show_container';
 import CreateCardContainer from './card/create_card_container';
 import UpdateCardContainer from './card/update_card_container';
+import Footer from './footer/footer';
 
 const App = () => (
     <div className='master-div'>
@@ -31,7 +32,7 @@ const App = () => (
             <Route path='/decks' component={DeckIndexContainer} />
             <Route path='/' component={SplashText} />
         </Switch>
-        
+        <Footer />
     </div>
 )
 

@@ -5,7 +5,10 @@ import DeckIndex from './deck_index';
 const mSTP = state => {
     let decks = Object.values(state.entities.decks)
     return (
-            {decks: decks}
+            {
+                decks: decks,
+                searh: ''
+            }
         )
 }
 

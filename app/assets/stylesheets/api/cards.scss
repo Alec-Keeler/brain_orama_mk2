@@ -11,7 +11,7 @@
     position: relative;
     top: 20%;
     margin: 0 auto;
-    height: 425px;
+    height: 480px;
     color: white;
     flex-direction: column;
     border-radius: 20px;
@@ -39,23 +39,52 @@
 }
 
 .card-input-box-q {
+    border: 5px solid #626367; 
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    padding: 10px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 10px 0;
     display: flex;
     width: 250px;
     height: 55px;
     font-size: 14px;
-    background-color: #EAF2F6;
+    background-color: #C9E9E7;
 }
 .card-input-box-a {
+    border: 5px solid #626367; 
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    padding: 10px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 10px 0;
     display: flex;
     width: 350px;
     height: 70px;
     font-size: 14px;
-    background-color: #EAF2F6;
+    background-color: #C9E9E7;
 }
 
 textarea {
     resize: none;
     border-radius: 5px;
+}
+textarea:focus {
+    outline: none;
 }
 
 .card-form-submit {

@@ -5,8 +5,9 @@ import CardShow from './card_show';
 
 const mSTP = (state, ownProps) => {
     return (
-        {card: state.entities.cards[ownProps.match.params.cardId],
-        currentUser: state.entities.users[state.session.id]
+        {
+            card: state.entities.cards[ownProps.match.params.cardId],
+            currentUser: state.entities.users[state.session.id]
         }
     )
 }
