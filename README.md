@@ -45,4 +45,3 @@ This was accomplished by adding a key/value pair to the page's state to keep tra
 * Users can track their study progress with any given deck of cards.
 * Users can see and navigate to decks they are actively studying.
 * Users can navigate from card to card when studying, rather than navigating back and forth from the deck page.
-* Decks are ogranized by subject and can be found with a serach function.
