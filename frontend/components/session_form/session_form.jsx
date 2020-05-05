@@ -64,7 +64,14 @@ class SessionForm extends React.Component {
                         <input type="password" onChange={this.handleInput('password')} className='login-input'/>
                     <div className='submit-container'>
                         <input type='submit' value='Log In' className='oj-button'/>
-                        <button type='text' onClick={() => this.props.loginDemo().then(() => this.props.closeModal())} className='oj-button'>Demo User</button>
+                        {/* <button type='text' onClick={() => this.props.loginDemo().then(() => this.props.closeModal())} className='oj-button'>Demo User</button> */}
+                        <button type='text' className='oj-button'
+                            onClick={(e) => {
+                                e.preventDefault();
+                                this.props.loginDemo();
+                                this.props.closeModal();
+                            }}
+                        >Demo User</button>
                     </div>
                 </form>
                 <div className='other-form-container'>{this.props.otherForm}</div>
