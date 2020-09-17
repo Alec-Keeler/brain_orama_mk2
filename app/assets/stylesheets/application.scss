@@ -31,13 +31,13 @@
     width: 500px;
     margin: 0 auto;
     transform: translate(-50%, -50%);
-    background: #D8CCC7;
+    background: #324054;
     display: flex;
     border-radius: 25px;
 }
 
 .change-form-link {
-    color: blue;
+    color: #EF8744;
     text-decoration: underline;
     cursor: pointer;
 }
@@ -49,7 +49,7 @@
 .oj-button {
     // display: flex;
     justify-content: center;
-    background: #EF8744;
+    background: #3D91AF;
     color: #FEFDFB;
     width: 95px;
     height: 45px;
@@ -69,7 +69,7 @@
 .oj-signup {
     display: flex;
     justify-content: center;
-    background: #EF8744;
+    background: #3D91AF;
     color: #FEFDFB;
     width: 95px;
     height: 45px;
@@ -93,7 +93,7 @@
     display: flex;
     flex-direction: column;
     width: 500px;
-    height: 400px;
+    height: 350px;
     align-items: center;
 }
 
@@ -101,7 +101,7 @@
     display: flex;
     flex-direction: column;
     width: 500px;
-    height: 530px;
+    height: 480px;
     align-items: center;
 }
 
@@ -151,12 +151,15 @@
 }
 
 .login-input, .signup-input {
-    height: 35px;
+    height: 20px;
     font-size: 16px;
     border: none;
-    border-bottom: 3px solid #eee;
-    color: #2B7096;
+    border-bottom: 3px solid gray;
+    // color: #2B7096;
+    color: white;
     padding-top: 8px;
+    background: gray;
+    border-radius: 5px;
 }
 .login-input:focus {
     outline: none;
@@ -169,7 +172,7 @@
 
 .form-label {
     font-size: 13px;
-    color: rgb(111, 111, 111);
+    color: whitesmoke;
 }
 
 /* Header items */
@@ -185,7 +188,7 @@
 
 .splash-signup {
     cursor: pointer;
-    color: #EF8744;
+    color: #3D91AF;
 }
 
 #navbar {
